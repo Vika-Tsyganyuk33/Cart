@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat+Alternates:ital,wght@0,100;0,400;1,100;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://use.fontawesome.com/63b53ff7dc.js"></script>
+    <script defer src="js/bootstrap.min.js"></script>
+    <script defer src="js/main.js"></script>
+    <title>Главная</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="img/cb92f275d0910e502bfbffdba4bddfd1.jpg" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Главная</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Каталог</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">О нас</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 right-ul">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#regModal"
+                      >Регистрация</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#authModal"
+                      >Авторизация</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item cart-open">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#cartModal"
+                  href="#"
+                  ><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+
+            <!-- Modal Cart -->
+            <div
+              class="modal fade"
+              id="cartModal"
+              tabindex="-1"
+              aria-labelledby="ModalLabelCart"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabelCart">Корзина</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <table class="table table-striped align-middle cart-table">
+                      <thead>
+                        <tr>
+                          <th scope="col">№</th>
+                          <th scope="col">Название</th>
+                          <th scope="col">Картинка</th>
+                          <th scope="col">Цена</th>
+                          <th scope="col">Кол-во</th>
+                          <th scope="col">Сумма</th>
+                          <!-- <th scope="col">Del</th> -->
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td>Итого:</td>
+                          <td class="cart-sum"></td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">
+                      Оформить заказ
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+        
+      <!-- Modal authorisation -->
+      <div
+        class="modal fade"
+        id="authModal"
+        tabindex="-1"
+        aria-labelledby="ModalLabelAuth"
+        aria-hidden="true"
+      >
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <div class="row myImg">
+          <div class="col">
+            <div class="card" style="width: 300px;">
+              <img src="img/1.png" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Женский комплект</h5>
+                <p class="price">1 500 руб</p>
+                <button class="btn btn-primary">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 300px;">
+              <img src="img/2.png" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Мужская куртка</h5>
+                <p class="price">5 000 руб</p>
+                <button class="btn btn-primary">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 300px;">
+              <img src="img/3.png" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Мужская футболка</h5>
+                <p class="price"> 500 руб</p>
+                <button class="btn btn-primary">Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
